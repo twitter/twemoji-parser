@@ -1,0 +1,14 @@
+[include]
+
+[ignore]
+.*/dist/.*
+.*/node_modules/.*
+
+[libs]
+
+[lints]
+
+[options]
+all=false
+emoji=true
+module.system=haste
