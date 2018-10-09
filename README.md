@@ -26,6 +26,11 @@ parse('I 🧡 Twemoji! 🥳');
 ]
 */
 ```
+## Authors
+
+* Nathan Downs <ndowns [at] twitter [dot] com>
+
+Follow [@TwitterOSS](https://twitter.com/twitteross) on Twitter for updates.
 
 ## Contributing
 
