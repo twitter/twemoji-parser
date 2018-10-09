@@ -47,4 +47,4 @@ Please report sensitive security issues via Twitter's bug-bounty program (https:
 
 ## License
 
-MIT https://github.com/https://github.com/twitter/twemoji-parser/blob/master/LICENSE
+MIT https://github.com/https://github.com/twitter/twemoji-parser/blob/master/LICENSE.md
