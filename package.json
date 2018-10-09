@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "babel src --out-dir dist --ignore test.js",
+    "ci": "yarnpkg lint && yarnpkg flow:ci && yarnpkg test",
     "cleanup": "rm -rf ./dist",
     "flow": "flow",
     "flow:ci": "flow check",
