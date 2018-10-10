@@ -4,13 +4,21 @@ A simple library for identifying emoji entities within a string in order to rend
 
 For example, this parser is used within the rendering flow for Tweets and other text on [mobile.twitter.com](https://mobile.twitter.com)
 
+## Setup
+Add `twemoji-parser` as a dependency to your project:
+```
+yarn add twemoji-parser
+```
+
+Or, to work directly in this repo, clone it and run `yarn install` from the repo root.
+
 ## Usage
 The [tests](src/__tests__/index.test.js) are intended to serve as a more exhaustive source of documentation, but the general idea is that the parser takes a string and returns an array of the emoji entities it finds:
 ```js
 import { parse } from 'twemoji-parser';
-parse('I 🧡 Twemoji! 🥳');
+const entities = parse('I 🧡 Twemoji! 🥳');
 /*
-[
+entities = [
   {
     url: 'https://twemoji.maxcdn.com/2/svg/1f9e1.svg',
     indices: [ 2, 4 ],
