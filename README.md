@@ -48,11 +48,11 @@ in all interactions with the community.
 
 ## Support
 
-Create a [new issue](https://github.com/https://github.com/twitter/twemoji-parser/issues/new) on GitHub.
+Create a [new issue](https://github.com/twitter/twemoji-parser/issues/new) on GitHub.
 
 ## Security Issues?
 Please report sensitive security issues via Twitter's bug-bounty program (https://hackerone.com/twitter) rather than GitHub.
 
 ## License
 
-MIT https://github.com/https://github.com/twitter/twemoji-parser/blob/master/LICENSE.md
+MIT https://github.com/twitter/twemoji-parser/blob/master/LICENSE.md
