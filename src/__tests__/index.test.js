@@ -612,4 +612,34 @@ describe('version spot checks', () => {
       });
     });
   });
+
+  describe('Emoji 12.1', () => {
+    test('trans flag', () => {
+      expect(parse('\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f')).toMatchObject([
+        {
+          indices: [0, 6],
+          text: '\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f'
+        }
+      ]);
+    });
+    describe('trans symbol', () => {
+      test('with vs16', () => {
+        expect(parse('\u26a7\ufe0f')).toMatchObject([
+          {
+            indices: [0, 2],
+            text: '\u26a7\ufe0f'
+          }
+        ]);
+      });
+
+      test('without vs16', () => {
+        expect(parse('\u26a7')).toMatchObject([
+          {
+            indices: [0, 1],
+            text: '\u26a7'
+          }
+        ]);
+      });
+    });
+  });
 });
