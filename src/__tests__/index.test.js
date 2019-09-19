@@ -98,7 +98,7 @@ describe('parse', () => {
     test('use MaxCDN SVGs by default', () => {
       expect(parse('I \u2764 emoji!')).toMatchObject([
         {
-          url: 'https://twemoji.maxcdn.com/2/svg/2764.svg'
+          url: 'https://twemoji.maxcdn.com/v/latest/svg/2764.svg'
         }
       ]);
     });
@@ -106,15 +106,15 @@ describe('parse', () => {
     test('can ask for MaxCDN PNGs', () => {
       expect(parse('I \u2764 emoji!', { assetType: 'png' })).toMatchObject([
         {
-          url: 'https://twemoji.maxcdn.com/2/72x72/2764.png'
+          url: 'https://twemoji.maxcdn.com/v/latest/72x72/2764.png'
         }
       ]);
     });
 
-    test('unrecognized assetType defaults back to SVG', () => {
-      expect(parse('I \u2764 emoji!', { assetType: 'svg' })).toMatchObject([
+    test('non-png assetType defaults back to SVG', () => {
+      expect(parse('I \u2764 emoji!', { assetType: 'foobar' })).toMatchObject([
         {
-          url: 'https://twemoji.maxcdn.com/2/svg/2764.svg'
+          url: 'https://twemoji.maxcdn.com/v/latest/svg/2764.svg'
         }
       ]);
     });

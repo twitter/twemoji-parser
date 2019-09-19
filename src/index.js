@@ -24,8 +24,8 @@ export function parse(text: string, options?: ParsingOptions): Array<EmojiEntity
       ? options.buildUrl
       : (codepoints, assetType) =>
           assetType === 'png'
-            ? `https://twemoji.maxcdn.com/2/72x72/${codepoints}.png`
-            : `https://twemoji.maxcdn.com/2/svg/${codepoints}.svg`;
+            ? `https://twemoji.maxcdn.com/v/latest/72x72/${codepoints}.png`
+            : `https://twemoji.maxcdn.com/v/latest/svg/${codepoints}.svg`;
 
   const entities = [];
 

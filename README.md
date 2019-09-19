@@ -20,13 +20,13 @@ const entities = parse('I 🧡 Twemoji! 🥳');
 /*
 entities = [
   {
-    url: 'https://twemoji.maxcdn.com/2/svg/1f9e1.svg',
+    url: 'https://twemoji.maxcdn.com/v/latest/svg/1f9e1.svg',
     indices: [ 2, 4 ],
     text: '🧡',
     type: 'emoji'
   },
   {
-    url: 'https://twemoji.maxcdn.com/2/svg/1f973.svg',
+    url: 'https://twemoji.maxcdn.com/v/latest/svg/1f973.svg',
     indices: [ 12, 14 ],
     text: '🥳',
     type: 'emoji'
