@@ -338,26 +338,18 @@ describe('version spot checks', () => {
           ]);
         });
 
-        test('with unsorted different skin tones are unrecognized', () => {
+        test('with unsorted different skin tones', () => {
           expect(parse('\ud83e\uddd1\ud83c\udffb\u200d\ud83e\udd1d\u200d\ud83e\uddd1\ud83c\udffc')).toMatchObject([
-            { text: '\ud83e\uddd1\ud83c\udffb' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83e\uddd1\ud83c\udffc' }
+            { indices: [0, 12] }
           ]);
           expect(parse('\ud83e\uddd1\ud83c\udffc\u200d\ud83e\udd1d\u200d\ud83e\uddd1\ud83c\udffd')).toMatchObject([
-            { text: '\ud83e\uddd1\ud83c\udffc' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83e\uddd1\ud83c\udffd' }
+            { indices: [0, 12] }
           ]);
           expect(parse('\ud83e\uddd1\ud83c\udffd\u200d\ud83e\udd1d\u200d\ud83e\uddd1\ud83c\udffe')).toMatchObject([
-            { text: '\ud83e\uddd1\ud83c\udffd' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83e\uddd1\ud83c\udffe' }
+            { indices: [0, 12] }
           ]);
           expect(parse('\ud83e\uddd1\ud83c\udffe\u200d\ud83e\udd1d\u200d\ud83e\uddd1\ud83c\udfff')).toMatchObject([
-            { text: '\ud83e\uddd1\ud83c\udffe' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83e\uddd1\ud83c\udfff' }
+            { indices: [0, 12] }
           ]);
         });
 
@@ -410,26 +402,18 @@ describe('version spot checks', () => {
           ]);
         });
 
-        test('with unsorted different skin tones are unrecognized', () => {
+        test('with unsorted different skin tones', () => {
           expect(parse('\ud83d\udc69\ud83c\udffb\u200d\ud83e\udd1d\u200d\ud83d\udc69\ud83c\udffc')).toMatchObject([
-            { text: '\ud83d\udc69\ud83c\udffb' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83d\udc69\ud83c\udffc' }
+            { indices: [0, 12] }
           ]);
           expect(parse('\ud83d\udc69\ud83c\udffc\u200d\ud83e\udd1d\u200d\ud83d\udc69\ud83c\udffd')).toMatchObject([
-            { text: '\ud83d\udc69\ud83c\udffc' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83d\udc69\ud83c\udffd' }
+            { indices: [0, 12] }
           ]);
           expect(parse('\ud83d\udc69\ud83c\udffd\u200d\ud83e\udd1d\u200d\ud83d\udc69\ud83c\udffe')).toMatchObject([
-            { text: '\ud83d\udc69\ud83c\udffd' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83d\udc69\ud83c\udffe' }
+            { indices: [0, 12] }
           ]);
           expect(parse('\ud83d\udc69\ud83c\udffe\u200d\ud83e\udd1d\u200d\ud83d\udc69\ud83c\udfff')).toMatchObject([
-            { text: '\ud83d\udc69\ud83c\udffe' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83d\udc69\ud83c\udfff' }
+            { indices: [0, 12] }
           ]);
         });
 
@@ -566,26 +550,18 @@ describe('version spot checks', () => {
           ]);
         });
 
-        test('with unsorted different skin tones are unrecognized', () => {
+        test('with unsorted different skin tones', () => {
           expect(parse('\ud83d\udc68\ud83c\udffb\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c\udffc')).toMatchObject([
-            { text: '\ud83d\udc68\ud83c\udffb' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83d\udc68\ud83c\udffc' }
+            { indices: [0, 12] }
           ]);
           expect(parse('\ud83d\udc68\ud83c\udffc\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c\udffd')).toMatchObject([
-            { text: '\ud83d\udc68\ud83c\udffc' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83d\udc68\ud83c\udffd' }
+            { indices: [0, 12] }
           ]);
           expect(parse('\ud83d\udc68\ud83c\udffd\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c\udffe')).toMatchObject([
-            { text: '\ud83d\udc68\ud83c\udffd' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83d\udc68\ud83c\udffe' }
+            { indices: [0, 12] }
           ]);
           expect(parse('\ud83d\udc68\ud83c\udffe\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c\udfff')).toMatchObject([
-            { text: '\ud83d\udc68\ud83c\udffe' },
-            { text: '\ud83e\udd1d' },
-            { text: '\ud83d\udc68\ud83c\udfff' }
+            { indices: [0, 12] }
           ]);
         });
 
