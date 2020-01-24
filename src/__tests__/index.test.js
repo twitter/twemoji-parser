@@ -617,5 +617,39 @@ describe('version spot checks', () => {
         ]);
       });
     });
+
+    describe('gender-neutral sequences', () => {
+      const genderNeutralEmoji = [
+        { name: 'person, red haired', text: '\ud83e\uddd1\u200d\ud83e\uddb0' },
+        { name: 'person, curly hair, light skin tone', text: '\ud83e\uddd1\ud83c\udffb\u200d\ud83e\uddb1' },
+        { name: 'person, white hair, dark skin tone', text: '\ud83e\uddd1\ud83c\udfff\u200d\ud83e\uddb3' },
+        { name: 'person, bald, medium skin tone', text: '\ud83e\uddd1\ud83c\udffd\u200d\ud83e\uddb2' },
+        { name: 'health worker', text: '\ud83e\uddd1\u200d\u2695\ufe0f' },
+        { name: 'student, light skin tone', text: '\ud83e\uddd1\ud83c\udffb\u200d\ud83c\udf93' },
+        { name: 'teacher, medium-light skin tone', text: '\ud83e\uddd1\ud83c\udffc\u200d\ud83c\udfeb' },
+        { name: 'judge, medium skin tone', text: '\ud83e\uddd1\ud83c\udffd\u200d\u2696\ufe0f' },
+        { name: 'farmer, medium-dark skin tone', text: '\ud83e\uddd1\ud83c\udffe\u200d\ud83c\udf3e' },
+        { name: 'cook, dark skin tone', text: '\ud83e\uddd1\ud83c\udfff\u200d\ud83c\udf73' },
+        { name: 'mechanic', text: '\ud83e\uddd1\u200d\ud83d\udd27' },
+        { name: 'factory worker, light skin tone', text: '\ud83e\uddd1\ud83c\udffb\u200d\ud83c\udfed' },
+        { name: 'office worker, medium-light skin tone', text: '\ud83e\uddd1\ud83c\udffc\u200d\ud83d\udcbc' },
+        { name: 'scientist, medium skin tone', text: '\ud83e\uddd1\ud83c\udffd\u200d\ud83d\udd2c' },
+        { name: 'technologist, medium-dark skin tone', text: '\ud83e\uddd1\ud83c\udffe\u200d\ud83d\udcbb' },
+        { name: 'singer, dark skin tone', text: '\ud83e\uddd1\ud83c\udfff\u200d\ud83c\udfa4' },
+        { name: 'artist', text: '\ud83e\uddd1\u200d\ud83c\udfa8' },
+        { name: 'pilot, light skin tone', text: '\ud83e\uddd1\ud83c\udffb\u200d\u2708\ufe0f' },
+        { name: 'astronaut, medium-light skin tone', text: '\ud83e\uddd1\ud83c\udffc\u200d\ud83d\ude80' },
+        { name: 'firefighter, medium skin tone', text: '\ud83e\uddd1\ud83c\udffd\u200d\ud83d\ude92' },
+        { name: 'person with probing cane, medium-dark skin tone', text: '\ud83e\uddd1\ud83c\udffe\u200d\ud83e\uddaf' },
+        { name: 'person in motorized wheelchair, dark skin tone', text: '\ud83e\uddd1\ud83c\udfff\u200d\ud83e\uddbc' },
+        { name: 'person in manual wheelchair', text: '\ud83e\uddd1\u200d\ud83e\uddbd' }
+      ];
+
+      for (const { name, text } of genderNeutralEmoji) {
+        test(name, () => {
+          expect(parse(text)).toMatchObject([{ text }]);
+        });
+      }
+    });
   });
 });
