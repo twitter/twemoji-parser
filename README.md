@@ -51,7 +51,7 @@ in all interactions with the community.
 Create a [new issue](https://github.com/twitter/twemoji-parser/issues/new) on GitHub.
 
 ## Security Issues?
-Please report sensitive security issues via Twitter's [bug-bounty program](https://hackerone.com/twitter) rather than GitHub.
+Please report sensitive security issues via Twitter's bug-bounty program (https://hackerone.com/twitter) rather than GitHub.
 
 ## License
 

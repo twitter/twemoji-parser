@@ -598,6 +598,7 @@ describe('version spot checks', () => {
         }
       ]);
     });
+
     describe('trans symbol', () => {
       test('with vs16', () => {
         expect(parse('\u26a7\ufe0f')).toMatchObject([
@@ -650,6 +651,62 @@ describe('version spot checks', () => {
           expect(parse(text)).toMatchObject([{ text }]);
         });
       }
+    });
+  });
+
+  describe('Emoji 13.0', () => {
+    test('Mx Claus', () => {
+      expect(parse('\ud83e\uddd1\u200d\ud83c\udf84')).toMatchObject([
+        {
+          indices: [0, 5],
+          text: '\ud83e\uddd1\u200d\ud83c\udf84'
+        }
+      ]);
+    });
+
+    test('black cat', () => {
+      expect(parse('\ud83d\udc08\u200d\u2b1b')).toMatchObject([
+        {
+          indices: [0, 4],
+          text: '\ud83d\udc08\u200d\u2b1b'
+        }
+      ]);
+    });
+
+    test('polar bear', () => {
+      expect(parse('\ud83d\udc3b\u200d\u2744\ufe0f')).toMatchObject([
+        {
+          indices: [0, 5],
+          text: '\ud83d\udc3b\u200d\u2744\ufe0f'
+        }
+      ]);
+    });
+
+    test('woman feeding baby', () => {
+      expect(parse('\ud83d\udc69\u200d\ud83c\udf7c')).toMatchObject([
+        {
+          indices: [0, 5],
+          text: '\ud83d\udc69\u200d\ud83c\udf7c'
+        }
+      ]);
+    });
+
+    test('man feeding baby', () => {
+      expect(parse('\ud83d\udc68\u200d\ud83c\udf7c')).toMatchObject([
+        {
+          indices: [0, 5],
+          text: '\ud83d\udc68\u200d\ud83c\udf7c'
+        }
+      ]);
+    });
+
+    test('person feeding baby', () => {
+      expect(parse('\ud83e\uddd1\u200d\ud83c\udf7c')).toMatchObject([
+        {
+          indices: [0, 5],
+          text: '\ud83e\uddd1\u200d\ud83c\udf7c'
+        }
+      ]);
     });
   });
 });

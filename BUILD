@@ -1,15 +1,15 @@
 node_module(
-    sources = rglobs(
+    sources = [
         ".babelrc",
         ".eslintignore",
         ".eslintrc",
         ".flowconfig",
-        "scripts/*",
-        "src/*",
         "jest.config.js",
         "package.json",
+        "scripts/**/*",
+        "src/**/*",
         "yarn.lock",
-    ),
+    ],
     package_manager = "yarn",
 )
 
