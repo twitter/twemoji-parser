@@ -1,0 +1,14 @@
+[GLOBAL]
+pants_version = "1.26.0.dev0"
+build_file_imports = "error"
+
+[jvm-platform]
+default_platform = "java8"
+platforms = """
+{
+  'java8': {'source': '8', 'target': '8', 'args': [] },
+}
+"""
+
+[resolver]
+resolver = "coursier"
