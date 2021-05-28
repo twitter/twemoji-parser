@@ -2,8 +2,9 @@ dist
 node_modules
 yarn-error.log
 .npmrc
+PROJECT
+.cache
 .pants.d
-.pids
 .pants.workdir.file_lock
 .pants.workdir.file_lock.lock_message
-.cache
+.pids

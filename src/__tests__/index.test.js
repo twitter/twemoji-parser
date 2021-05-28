@@ -709,4 +709,62 @@ describe('version spot checks', () => {
       ]);
     });
   });
+
+  describe('Emoji 13.1', () => {
+    test('Face exhaling', () => {
+      expect(parse('\ud83d\ude2e\u200d\ud83d\udca8')).toMatchObject([
+        {
+          indices: [0, 5],
+          text: '\ud83d\ude2e\u200d\ud83d\udca8'
+        }
+      ]);
+    });
+
+    test('Face in clouds', () => {
+      expect(parse('\ud83d\ude36\u200d\ud83c\udf2b\ufe0f')).toMatchObject([
+        {
+          indices: [0, 6],
+          text: '\ud83d\ude36\u200d\ud83c\udf2b\ufe0f'
+        }
+      ]);
+    });
+
+    test('Bearded woman', () => {
+      expect(parse('\ud83e\uddd4\u200d\u2640\ufe0f')).toMatchObject([
+        {
+          indices: [0, 5],
+          text: '\ud83e\uddd4\u200d\u2640\ufe0f'
+        }
+      ]);
+    });
+
+    test('Couple with heart and different skintones', () => {
+      expect(parse('\ud83d\udc69\ud83c\udffd\u200d\u2764\ufe0f\u200d\ud83d\udc69\ud83c\udffb')).toMatchObject([
+        {
+          indices: [0, 12],
+          text: '\ud83d\udc69\ud83c\udffd\u200d\u2764\ufe0f\u200d\ud83d\udc69\ud83c\udffb'
+        }
+      ]);
+    });
+
+    test('Couple kissing with different skintones', () => {
+      expect(
+        parse('\ud83d\udc69\ud83c\udffc\u200d\u2764\ufe0f\u200d\ud83d\udc8b\u200d\ud83d\udc69\ud83c\udffd')
+      ).toMatchObject([
+        {
+          indices: [0, 15],
+          text: '\ud83d\udc69\ud83c\udffc\u200d\u2764\ufe0f\u200d\ud83d\udc8b\u200d\ud83d\udc69\ud83c\udffd'
+        }
+      ]);
+    });
+
+    test('Heart on fire', () => {
+      expect(parse('\u2764\ufe0f\u200d\ud83d\udd25')).toMatchObject([
+        {
+          indices: [0, 5],
+          text: '\u2764\ufe0f\u200d\ud83d\udd25'
+        }
+      ]);
+    });
+  });
 });
