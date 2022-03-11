@@ -767,4 +767,46 @@ describe('version spot checks', () => {
       ]);
     });
   });
+
+  describe('Emoji 14.0', () => {
+    test('single-codepoint handshake with no skintones', () => {
+      expect(parse('\ud83e\udd1d')).toMatchObject([
+        {
+          indices: [0, 2],
+          text: '\ud83e\udd1d'
+        }
+      ]);
+    });
+
+    test('single-codepoint handshake with both hands the same skintone', () => {
+      expect(parse('\ud83e\udd1d\ud83c\udffe')).toMatchObject([
+        {
+          indices: [0, 4],
+          text: '\ud83e\udd1d\ud83c\udffe'
+        }
+      ]);
+    });
+
+    test('multi-codepoint handshake with different skintones', () => {
+      expect(parse('\ud83e\udef1\ud83c\udfff\u200d\ud83e\udef2\ud83c\udffd')).toMatchObject([
+        {
+          indices: [0, 9],
+          text: '\ud83e\udef1\ud83c\udfff\u200d\ud83e\udef2\ud83c\udffd'
+        }
+      ]);
+    });
+
+    test('multi-codepoint handshake with same skintone is unrecognized', () => {
+      expect(parse('\ud83e\udef1\ud83c\udffd\u200d\ud83e\udef2\ud83c\udffd')).toMatchObject([
+        {
+          indices: [0, 4],
+          text: '\ud83e\udef1\ud83c\udffd'
+        },
+        {
+          indices: [5, 9],
+          text: '\ud83e\udef2\ud83c\udffd'
+        }
+      ]);
+    });
+  });
 });
