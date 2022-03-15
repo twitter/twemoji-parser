@@ -4,8 +4,10 @@
   "version": "14.0.0",
   "description": "Parser for identifying Twemoji in text",
   "main": "dist/index.js",
+  "types": "types",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "build": "babel src --out-dir dist --ignore test.js",
